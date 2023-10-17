@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Gabarito";
+  src: url("./assets/fonts/Gabarito-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gabarito";
+  src: url("./assets/fonts/Gabarito-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gabarito";
+  src: url("./assets/fonts/Gabarito-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gabarito";
+  src: url("./assets/fonts/Gabarito-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gabarito";
+  src: url("./assets/fonts/Gabarito-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gabarito";
+  src: url("./assets/fonts/Gabarito-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+.card-glow {
+  -webkit-box-shadow: 0px 0px 69px 20px rgba(191, 222, 66, 0.6);
+  -moz-box-shadow: 0px 0px 69px 20px rgba(191, 222, 66, 0.6);
+  box-shadow: 0px 0px 69px 20px rgba(191, 222, 66, 0.6);
+}
