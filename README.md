@@ -21,7 +21,7 @@ La informació dels personatges ha estat extreta de:
 
 ## Demo
 
-Insert gif or link to demo
+https://rick-and-morty-app-rosy.vercel.app/
 
 ## Run Locally
 

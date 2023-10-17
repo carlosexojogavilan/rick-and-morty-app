@@ -5,6 +5,8 @@ const Footer = () => {
       <a
         href="https://github.com/carlosexojogavilan"
         className="cursor-pointer underline decoration-[#bfde42] underline-offset-2"
+        rel="no-opener"
+        target="_blanck"
       >
         Carlos Exojo
       </a>
