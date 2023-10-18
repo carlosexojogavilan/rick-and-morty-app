@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import CharacterCard from "./CharacterCard";
-import ErrorIcon from "../assets/icons/ErrorIcon.svg";
+import { ErrorIcon } from "../assets/icons/icons";
 import Loader from "./Loader";
 
 const CharacterContainer = ({ search }) => {
@@ -56,7 +56,7 @@ const CharacterContainer = ({ search }) => {
         <h2 className="min-w-fit text-3xl md:text-4xl text-white">
           List of characters
         </h2>
-        <span className="w-full h-1 ml-4 bg-[#BFDE42]"></span>
+        <span className="w-full h-1 ml-4 bg-primary"></span>
       </div>
       {error ? (
         <div className="flex justify-center items-center gap-4 text-md md:text-2xl font-bold py-4 px-4 border-2 border-[#9C3F2C] bg-[#C9553E] rounded-xl">
@@ -85,7 +85,7 @@ const CharacterContainer = ({ search }) => {
               </ul>
               <button
                 onClick={getMoreCharacters}
-                className={`block mx-auto text-xl font-medium px-6 py-2 mt-10 border-2 border-[#829C1C] rounded-xl bg-[#BFDE42] hover:bg-[#9FBF22] disabled:opacity-50 disabled:cursor-not-allowed`}
+                className={`block mx-auto text-xl font-medium px-6 py-2 mt-10 border-2 border-[#829C1C] rounded-xl bg-primary hover:bg-[#9FBF22] disabled:opacity-50 disabled:cursor-not-allowed`}
                 disabled={lastPage}
               >
                 Load more

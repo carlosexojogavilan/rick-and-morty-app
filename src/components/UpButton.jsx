@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import UpButtonIcon from "../assets/icons/UpIcon.svg";
+import { UpIcon } from "../assets/icons/icons";
 
 const UpButton = () => {
   const [showButton, setShowButton] = useState(false);
@@ -24,10 +24,10 @@ const UpButton = () => {
     <>
       {showButton && (
         <button
-          className="fixed bottom-4 right-4 p-2 rounded-full border-2 border-[#829C1C] bg-[#BFDE42] hover:bg-[#9FBF22]"
+          className="fixed bottom-4 right-4 p-2 rounded-full border-2 border-[#829C1C] bg-primary hover:bg-[#9FBF22]"
           onClick={goToTop}
         >
-          <img src={UpButtonIcon}></img>
+          <img src={UpIcon}></img>
         </button>
       )}
     </>

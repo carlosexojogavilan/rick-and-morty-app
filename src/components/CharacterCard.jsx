@@ -1,14 +1,15 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "../index.css";
 
-import AliveIcon from "../assets/icons/AliveIcon.svg";
-import DeadIcon from "../assets/icons/DeadIcon.svg";
-import UnknownIcon from "../assets/icons/UnknownIcon.svg";
-import HumanIcon from "../assets/icons/HumanIcon.svg";
-import AlienIcon from "../assets/icons/AlienIcon.svg";
-import MaleIcon from "../assets/icons/MaleIcon.svg";
-import FemaleIcon from "../assets/icons/FemaleIcon.svg";
+import {
+  AliveIcon,
+  DeadIcon,
+  UnknownIcon,
+  HumanIcon,
+  AlienIcon,
+  MaleIcon,
+  FemaleIcon,
+} from "../assets/icons/icons";
 
 AOS.init({
   // Global settings:
@@ -40,43 +41,57 @@ const CharacterCard = ({
   location,
   origin,
 }) => {
-  const statusType =
-    status === "Alive"
-      ? "bg-[#71CA44] text-[#182D0D] border border-[#182D0D]"
-      : status === "Dead"
-      ? "bg-[#CA5A44] text-[#2D120D] border border-[#2D120D]"
-      : "bg-[#949494] text-[#202020] border border-[#202020]";
+  let statusType, statusIcon, genderType, genderIcon, specieType;
 
-  const statusIcon =
-    status === "Alive" ? AliveIcon : status === "Dead" ? DeadIcon : UnknownIcon;
+  switch (status) {
+    case "Alive":
+      statusType = "bg-[#71CA44] text-[#182D0D] border border-[#182D0D]";
+      statusIcon = AliveIcon;
+      break;
+    case "Dead":
+      statusType = "bg-[#CA5A44] text-[#2D120D] border border-[#2D120D]";
+      statusIcon = DeadIcon;
+      break;
+    default:
+      statusType = "bg-[#949494] text-[#202020] border border-[#202020]";
+      statusIcon = UnknownIcon;
+  }
 
-  const genderType =
-    gender === "Male"
-      ? "bg-[#6495ED] text-black border border-[#182D0D]"
-      : gender === "Female"
-      ? "bg-[#ED6494] text-black border border-[#2D120D]"
-      : "bg-[#949494] text-[#202020] border border-[#202020]";
+  switch (gender) {
+    case "Male":
+      genderType = "bg-[#6495ED] text-black border border-[#182D0D]";
+      genderIcon = MaleIcon;
+      break;
+    case "Female":
+      genderType = "bg-[#ED6494] text-black border border-[#2D120D]";
+      genderIcon = FemaleIcon;
+      break;
+    default:
+      genderType = "bg-[#949494] text-[#202020] border border-[#202020]";
+      genderIcon = UnknownIcon;
+  }
 
-  const genderIcon =
-    gender === "Male"
-      ? MaleIcon
-      : gender === "Female"
-      ? FemaleIcon
-      : UnknownIcon;
-
-  const specieType =
-    specie === "Human" ? HumanIcon : specie === "Alien" ? AlienIcon : "";
+  switch (specie) {
+    case "Human":
+      specieType = HumanIcon;
+      break;
+    case "Alien":
+      specieType = AlienIcon;
+      break;
+    default:
+      specieType = "";
+  }
 
   return (
     <li>
       <div
-        className="max-w-[300px] sm:max-w-none flex flex-col sm:flex-row overflow-hidden border-2 border-[#bfde42] rounded-xl bg-[#42B4CA]"
+        className="max-w-[300px] sm:max-w-none flex flex-col sm:flex-row overflow-hidden border-2 border-primary rounded-xl bg-secondary"
         data-aos="fade-up"
       >
         <div className="relative">
           <img
             src={image}
-            className="select-none border-b-2 sm:border-b-0 sm:border-r-2 border-[#bfde42] sm:h-full sm:w-[216px] sm:object-cover sm:object-center"
+            className="select-none border-b-2 sm:border-b-0 sm:border-r-2 border-primary sm:h-full sm:w-[216px] sm:object-cover sm:object-center"
           />
           <span
             className={`text-xs font-semibold px-2.5 py-0.5 rounded absolute top-4 left-4 flex items-center gap-1 ${statusType}`}

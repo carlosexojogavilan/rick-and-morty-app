@@ -4,7 +4,7 @@ const Footer = () => {
       Made with ❤️ by{" "}
       <a
         href="https://github.com/carlosexojogavilan"
-        className="cursor-pointer underline decoration-[#bfde42] underline-offset-2"
+        className="cursor-pointer underline decoration-primary underline-offset-2"
         rel="no-opener"
         target="_blanck"
       >
